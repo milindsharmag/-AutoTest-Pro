@@ -28,6 +28,7 @@ driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
 
 rooter = driver.find_element(By.ID, "checkout")
 rooter.click()
+time.sleep(10)
 
 driver.find_element(By.ID, "first-name").send_keys("virat")
 
@@ -36,6 +37,16 @@ driver.find_element(By.ID, "last-name").send_keys("kohli")
 driver.find_element(By.ID, "postal-code").send_keys("570088")
 
 time.sleep(5)
+
+driver.find_element(By.ID, "continue").click()
+
+time.sleep(5)
+
+driver.save_screenshot("Checkout.png")
+
+driver.find_element(By.ID, "finish").click()
+
+time.sleep(10)
 
 
 
